@@ -146,13 +146,13 @@ rfm_data <-
   )
 ```
 
-There is one detail to fix. For `recency`, smaller values mean a customer purchased **more recently**, but we often want higher scores to mean “better” or “more engaged.” So we flip the recency score.
+There is one detail to fix. For `recency`, smaller values mean a customer purchased **more recently**, but we often want higher scores to mean “better” or “more engaged.” So we flip the recency score sorting the opposite way. We do this with `-recency`: 
 
 ```{r}
 rfm_data <-
   rfm_data |>
   mutate(
-    r_tile = max(r_tile) - r_tile + 1
+    r_tile = ntile(-recency, 5)
   )
 
 rfm_data |>

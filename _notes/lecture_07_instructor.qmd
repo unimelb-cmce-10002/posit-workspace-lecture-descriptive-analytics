@@ -129,6 +129,8 @@ rfm_data <-
     f_tile = ntile(frequency, 5),
     m_tile = ntile(monetary, 5)
   )
+
+glimpse(rfm_data)
 ```
 
 ### What to say
@@ -143,7 +145,7 @@ rfm_data <-
 rfm_data <-
   rfm_data |>
   mutate(
-    r_tile = max(r_tile) - r_tile + 1
+    r_tile = ntile(-recency, 5)
   )
 
 rfm_data |>
