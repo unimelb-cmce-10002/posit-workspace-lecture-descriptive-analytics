@@ -14,7 +14,10 @@ Our weapons of choice are:
 
 ## Repository Contents
 
-* `lecture_07_inclass.qmd`: Quarto notebook containing in-class exercises for constructing RFM (Recency, Frequency, Monetary) metrics, rule-based segmentation, and K-Means clustering.
+* `_notes/`: reference notebooks:
+  * `lecture_07_student.qmd`: Reference student notebook version.
+  * `lecture_07_inclass.qmd`: Template for the in-class activity.
+* `lecture_07_inclass.qmd`: Main Quarto notebook for student in-class exercises.
 * `data/cdnow_purchases.csv`: Transaction data for CDNOW customer purchases.
 * `project.Rproj`: RStudio project file.
 
